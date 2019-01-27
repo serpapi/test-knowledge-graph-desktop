@@ -1,9 +1,16 @@
 describe "SerpApi Desktop JSON" do
 
+  before(:all) do
+    @host = 'https://serpapi.com'
+    if ENV['SERPAPI_MODE'] == 'dev'
+       @host = 'http://localhost:3000'
+    end
+ end
+
   describe "Knowledge Graph for Oakmont Family Dental" do
 
     before :all do
-      @response = HTTP.get 'https://serpapi.com/search.json?q=Oakmont+Family+Dental&location=Eugene%2C+OR%2C+Oregon%2C+United+States&hl=en&gl=us&source=test'
+      @response = HTTP.get @host + '/search.json?q=Oakmont+Family+Dental&location=Eugene%2C+OR%2C+Oregon%2C+United+States&hl=en&gl=us&source=test'
       @json = @response.parse
     end
 
