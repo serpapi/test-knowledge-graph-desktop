@@ -52,11 +52,6 @@ describe "SerpApi Desktop JSON" do
       expect(@json["knowledge_graph"]["unclaimed_listing"]).to be(true)
     end
 
-    it "profiles" do
-      expect(@json["knowledge_graph"]["profiles"]).to be_a(Array)
-      expect(@json["knowledge_graph"]["profiles"]).to_not be_empty
-    end
-
     it "people_also_search_for" do
       expect(@json["knowledge_graph"]["people_also_search_for"]).to be_a(Array)
       expect(@json["knowledge_graph"]["people_also_search_for"]).to_not be_empty
