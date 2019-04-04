@@ -50,11 +50,6 @@ describe "SerpApi Desktop JSON" do
       expect(@json["knowledge_graph"]["periods"]).to_not be_empty
     end
 
-    it "medium" do
-      expect(@json["knowledge_graph"]["medium"]).to be_a(String)
-      expect(@json["knowledge_graph"]["medium"]).to_not be_empty
-    end
-
     it "education" do
       expect(@json["knowledge_graph"]["education"]).to be_a(String)
       expect(@json["knowledge_graph"]["education"]).to_not be_empty
