@@ -21,6 +21,10 @@ describe "SerpApi Desktop JSON" do
       expect(@json["knowledge_graph"]["title"]).to eq("Apple")
     end
 
+    it "contains a type" do
+      expect(@json["knowledge_graph"]["type"]).to_not be_empty
+    end
+
     it "contains correct website" do
       expect(@json["knowledge_graph"]["website"]).to eq("https://www.apple.com/")
     end
