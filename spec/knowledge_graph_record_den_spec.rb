@@ -20,6 +20,11 @@ describe "SerpApi Desktop JSON" do
       expect(@json["knowledge_graph"]["title"]).to_not be_empty
     end
 
+    it "type" do
+      expect(@json["knowledge_graph"]["type"]).to be_a(String)
+      expect(@json["knowledge_graph"]["type"]).to_not be_empty
+    end
+
     it "website" do
       expect(@json["knowledge_graph"]["website"]).to be_a(String)
       expect(@json["knowledge_graph"]["website"]).to_not be_empty
