@@ -31,6 +31,22 @@ describe "SerpApi Desktop JSON" do
       expect(@json["knowledge_graph"]["review_count"]).to be_an(Integer)
     end
 
+    it "contains local map" do
+      expect(@json["knowledge_graph"]["local_map"]).to be_an(Hash)
+    end
+
+    it "contains local map image" do
+      expect(@json["knowledge_graph"]["local_map"]["image"]).to be_an(String)
+    end
+
+    it "contains local map link" do
+      expect(@json["knowledge_graph"]["local_map"]["link"]).to be_an(String)
+    end
+
+    it "contains local map gps coordinates" do
+      expect(@json["knowledge_graph"]["local_map"]["gps_coordinates"]).to be_an(Hash)
+    end
+
   end
 
 end
